@@ -53,3 +53,7 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Doxygen-Dokumentation ignorieren
+html_Dokumentation/
+latex/
