@@ -48,7 +48,7 @@ Lowest Memory Address
 
 ---
 
-## **Doxygen-Dokumentation / Documentation**
+## **Doxygen-Documentation**
 
 Das gesamte Projekt ist vollständig nach dem **Doxygen-Standard** dokumentiert. Die Quellcodedokumentation kann lokal über die HTML-Struktur eingesehen werden.
 
