@@ -24,7 +24,6 @@ The ARM Cortex-M4 hardware natively bifurcates exception context saving into two
 1. **Hardware Stack Frame:** Triggered instantly by the CPU core when an exception occurs, pushing `xPSR`, `PC`, `LR`, `R12`, `R3`, `R2`, `R1`, and `R0`. The Thumb bit within the `xPSR` must always be initialized to `1`.
 2. **Software Stack Frame:** The remaining core registers—`R11` down to `R4`—are manually pushed and popped within the assembly block of the `PendSV_Handler` to completely freeze or resume the task's context state.
 
-##
 
 Highest Memory Address (Stack Top)
 +-------------------+
