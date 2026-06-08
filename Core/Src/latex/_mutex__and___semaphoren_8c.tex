@@ -1,0 +1,253 @@
+\doxysection{Mutex\+\_\+and\+\_\+\+Semaphoren.\+c File Reference}
+\hypertarget{_mutex__and___semaphoren_8c}{}\label{_mutex__and___semaphoren_8c}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+
+
+Implementierung von Mutexen und Semaphoren für die Task-\/\+Synchronisation.  
+
+
+{\ttfamily \+\#include "{}tcb.\+h"{}}\newline
+{\ttfamily \+\#include "{}os\+\_\+sync.\+h"{}}\newline
+{\ttfamily \+\#include "{}Mutex\+\_\+and\+\_\+\+Semaphoren.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a34d1254d68efd73f1e501380453980ec}{Max\+\_\+\+Task}}~3
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a9efee3bb9a4be6c7296c5ee13dfed431}{OS\+\_\+\+Mutex\+\_\+\+Init}} (OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}p\+Mutex)
+\begin{DoxyCompactList}\small\item\em Initialisiert ein Mutex-\/\+Objekt. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_ac40a2e3da6e050ab4c98690836c69c95}{OS\+\_\+\+Mutex\+\_\+\+Acquire\+Non\+Blocking}} (OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}p\+Mutex)
+\begin{DoxyCompactList}\small\item\em Fordert einen Mutex an (Non-\/\+Blocking). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a38e0eed515ce7530d96d7499c3c8f5ef}{OS\+\_\+\+Mutex\+\_\+\+Acquire\+Blocking}} (OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}p\+Mutex)
+\begin{DoxyCompactList}\small\item\em Fordert einen Mutex an (Blocking). \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a388066be2ecc95fc40554f2e77aacf72}{OS\+\_\+\+Mutex\+\_\+\+Acquire\+Timeout}} (OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}p\+Mutex, uint32\+\_\+t u32\+Timeout\+Ticks)
+\begin{DoxyCompactList}\small\item\em Fordert einen Mutex mit Timeout an. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a95578068834f21a6e7b799d67221ec03}{OS\+\_\+\+Mutex\+\_\+\+Release}} (OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}p\+Mutex)
+\begin{DoxyCompactList}\small\item\em Gibt einen Mutex frei. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a2b5cf1f9bdd531ae3eb6620760fbc5bd}{OS\+\_\+\+Semaphore\+\_\+init}} (OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}p\+Sem, uint32\+\_\+t u32\+Init\+Count, uint32\+\_\+t u32\+Max\+Count)
+\begin{DoxyCompactList}\small\item\em Initialisiert eine Semaphore. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_ada81c85b91ddf4146407b2e32eb06e69}{OS\+\_\+\+Sem\+\_\+\+Acquire\+Non\+Blocking}} (OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}p\+Sem)
+\begin{DoxyCompactList}\small\item\em Fordert ein Semaphore-\/\+Token an (Non-\/\+Blocking). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a6d5fb9b1e3255df3bab9fcb84a40f8f2}{OS\+\_\+\+Sem\+\_\+\+Acquire\+Blocking}} (OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}p\+Sem)
+\begin{DoxyCompactList}\small\item\em Fordert ein Semaphore-\/\+Token an (Blocking). \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_a3c7051e2a18d0d4b456d073ea7bdb985}{OS\+\_\+\+Sem\+\_\+\+Acquire\+Timeout}} (OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}p\+Sem, uint32\+\_\+t u32\+Timeout\+Ticks)
+\begin{DoxyCompactList}\small\item\em Fordert ein Semaphore-\/\+Token an mit Timeout. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{_mutex__and___semaphoren_8c_aa005cb3fa3f0f17ef73da4383bef26c5}{OS\+\_\+\+Sem\+\_\+\+Release}} (OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}p\+Sem)
+\begin{DoxyCompactList}\small\item\em Gibt ein Semaphore-\/\+Token frei oder signalisiert ein Event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementierung von Mutexen und Semaphoren für die Task-\/\+Synchronisation. 
+
+Diese Datei enthält die threadsicheren Implementierungen für Mutexe und zählende Semaphoren. Sie ermöglichen das sichere Teilen von Ressourcen sowie die Signalisierung von Events zwischen verschiedenen Tasks. Die Funktionen unterstützen Non-\/\+Blocking, Blocking und Timeout-\/basierte Zugriffe.
+
+\begin{DoxyAuthor}{Author}
+Ezechiel Tonkeme 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30. Mai 2026 
+\end{DoxyDate}
+
+
+\label{_mutex__and___semaphoren_8c_doc-define-members}
+\Hypertarget{_mutex__and___semaphoren_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_mutex__and___semaphoren_8c_a34d1254d68efd73f1e501380453980ec}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!Max\_Task@{Max\_Task}}
+\index{Max\_Task@{Max\_Task}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{Max\_Task}{Max\_Task}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a34d1254d68efd73f1e501380453980ec} 
+\+\#define Max\+\_\+\+Task~3}
+
+
+
+\label{_mutex__and___semaphoren_8c_doc-func-members}
+\Hypertarget{_mutex__and___semaphoren_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_mutex__and___semaphoren_8c_a38e0eed515ce7530d96d7499c3c8f5ef}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Mutex\_AcquireBlocking@{OS\_Mutex\_AcquireBlocking}}
+\index{OS\_Mutex\_AcquireBlocking@{OS\_Mutex\_AcquireBlocking}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Mutex\_AcquireBlocking()}{OS\_Mutex\_AcquireBlocking()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a38e0eed515ce7530d96d7499c3c8f5ef} 
+void OS\+\_\+\+Mutex\+\_\+\+Acquire\+Blocking (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Mutex}{}\end{DoxyParamCaption})}
+
+
+
+Fordert einen Mutex an (Blocking). 
+
+Ist der Mutex belegt, wird der aktuelle Task in den Zustand Task\+State\+\_\+\+Blocked versetzt und in der Wartemaske des Mutex registriert. Anschließend wird ein Context Switch (Pend\+SV) erzwungen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Mutex} & Zeiger auf das angeforderte Mutex-\/\+Objekt. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_mutex__and___semaphoren_8c_ac40a2e3da6e050ab4c98690836c69c95}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Mutex\_AcquireNonBlocking@{OS\_Mutex\_AcquireNonBlocking}}
+\index{OS\_Mutex\_AcquireNonBlocking@{OS\_Mutex\_AcquireNonBlocking}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Mutex\_AcquireNonBlocking()}{OS\_Mutex\_AcquireNonBlocking()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_ac40a2e3da6e050ab4c98690836c69c95} 
+uint8\+\_\+t OS\+\_\+\+Mutex\+\_\+\+Acquire\+Non\+Blocking (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Mutex}{}\end{DoxyParamCaption})}
+
+
+
+Fordert einen Mutex an (Non-\/\+Blocking). 
+
+Versucht, den Mutex zu sperren. Ist dieser bereits belegt, kehrt die Funktion sofort zurück, ohne den aufrufenden Task zu blockieren.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Mutex} & Zeiger auf das angeforderte Mutex-\/\+Objekt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 bei erfolgreichem Acquire, 0 wenn der Mutex bereits belegt ist. 
+\end{DoxyReturn}
+\Hypertarget{_mutex__and___semaphoren_8c_a388066be2ecc95fc40554f2e77aacf72}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Mutex\_AcquireTimeout@{OS\_Mutex\_AcquireTimeout}}
+\index{OS\_Mutex\_AcquireTimeout@{OS\_Mutex\_AcquireTimeout}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Mutex\_AcquireTimeout()}{OS\_Mutex\_AcquireTimeout()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a388066be2ecc95fc40554f2e77aacf72} 
+uint8\+\_\+t OS\+\_\+\+Mutex\+\_\+\+Acquire\+Timeout (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Mutex}{, }\item[{uint32\+\_\+t}]{u32\+Timeout\+Ticks}{}\end{DoxyParamCaption})}
+
+
+
+Fordert einen Mutex mit Timeout an. 
+
+Blockiert den Task maximal für die angegebene Zeitspanne (Ticks). Wird der Task durch einen anderen Task geweckt (Release), erhält er den Mutex. Läuft der Timer ab (Sys\+Tick), schlägt das Acquire fehl.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Mutex} & Zeiger auf das angeforderte Mutex-\/\+Objekt. \\
+\hline
+{\em u32\+Timeout\+Ticks} & Maximale Wartezeit in OS-\/\+Ticks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 bei erfolgreichem Acquire, 0 bei einem Timeout. 
+\end{DoxyReturn}
+\Hypertarget{_mutex__and___semaphoren_8c_a9efee3bb9a4be6c7296c5ee13dfed431}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Mutex\_Init@{OS\_Mutex\_Init}}
+\index{OS\_Mutex\_Init@{OS\_Mutex\_Init}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Mutex\_Init()}{OS\_Mutex\_Init()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a9efee3bb9a4be6c7296c5ee13dfed431} 
+void OS\+\_\+\+Mutex\+\_\+\+Init (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Mutex}{}\end{DoxyParamCaption})}
+
+
+
+Initialisiert ein Mutex-\/\+Objekt. 
+
+Setzt den Lock-\/\+Status auf frei und weist eine ungültige Owner-\/\+ID (255) zu, um zu signalisieren, dass der Mutex aktuell keinem Task gehört.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Mutex} & Zeiger auf das zu initialisierende OS\+\_\+\+Mutex\+\_\+t Objekt. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_mutex__and___semaphoren_8c_a95578068834f21a6e7b799d67221ec03}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Mutex\_Release@{OS\_Mutex\_Release}}
+\index{OS\_Mutex\_Release@{OS\_Mutex\_Release}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Mutex\_Release()}{OS\_Mutex\_Release()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a95578068834f21a6e7b799d67221ec03} 
+void OS\+\_\+\+Mutex\+\_\+\+Release (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Mutex}{}\end{DoxyParamCaption})}
+
+
+
+Gibt einen Mutex frei. 
+
+Überprüft zunächst, ob der aufrufende Task tatsächlich der Besitzer ist. Sind andere Tasks in der Warteliste, wird der Mutex direkt an den wartenden Task mit der entsprechenden Priorität (bzw. ID) übergeben und ein Context Switch angefordert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Mutex} & Zeiger auf das freizugebende Mutex-\/\+Objekt. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_mutex__and___semaphoren_8c_a6d5fb9b1e3255df3bab9fcb84a40f8f2}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Sem\_AcquireBlocking@{OS\_Sem\_AcquireBlocking}}
+\index{OS\_Sem\_AcquireBlocking@{OS\_Sem\_AcquireBlocking}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Sem\_AcquireBlocking()}{OS\_Sem\_AcquireBlocking()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a6d5fb9b1e3255df3bab9fcb84a40f8f2} 
+void OS\+\_\+\+Sem\+\_\+\+Acquire\+Blocking (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Sem}{}\end{DoxyParamCaption})}
+
+
+
+Fordert ein Semaphore-\/\+Token an (Blocking). 
+
+Wenn keine Token verfügbar sind (Count == 0), wird der Task blockiert und ein Context Switch ausgelöst, um CPU-\/\+Zeit zu sparen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Sem} & Zeiger auf das angeforderte Semaphore-\/\+Objekt. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_mutex__and___semaphoren_8c_ada81c85b91ddf4146407b2e32eb06e69}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Sem\_AcquireNonBlocking@{OS\_Sem\_AcquireNonBlocking}}
+\index{OS\_Sem\_AcquireNonBlocking@{OS\_Sem\_AcquireNonBlocking}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Sem\_AcquireNonBlocking()}{OS\_Sem\_AcquireNonBlocking()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_ada81c85b91ddf4146407b2e32eb06e69} 
+uint8\+\_\+t OS\+\_\+\+Sem\+\_\+\+Acquire\+Non\+Blocking (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Sem}{}\end{DoxyParamCaption})}
+
+
+
+Fordert ein Semaphore-\/\+Token an (Non-\/\+Blocking). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Sem} & Zeiger auf das angeforderte Semaphore-\/\+Objekt. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 wenn ein Token erfolgreich abgezogen wurde, 0 wenn kein Token verfügbar war. 
+\end{DoxyReturn}
+\Hypertarget{_mutex__and___semaphoren_8c_a3c7051e2a18d0d4b456d073ea7bdb985}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Sem\_AcquireTimeout@{OS\_Sem\_AcquireTimeout}}
+\index{OS\_Sem\_AcquireTimeout@{OS\_Sem\_AcquireTimeout}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Sem\_AcquireTimeout()}{OS\_Sem\_AcquireTimeout()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a3c7051e2a18d0d4b456d073ea7bdb985} 
+uint8\+\_\+t OS\+\_\+\+Sem\+\_\+\+Acquire\+Timeout (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Sem}{, }\item[{uint32\+\_\+t}]{u32\+Timeout\+Ticks}{}\end{DoxyParamCaption})}
+
+
+
+Fordert ein Semaphore-\/\+Token an mit Timeout. 
+
+Versetzt den Task in den Blocked-\/\+Status, falls kein Token vorhanden ist. Der Task wacht entweder durch ein Timeout (ausgelöst vom Sys\+Tick) oder durch die Freigabe eines Tokens (Release) wieder auf.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Sem} & Zeiger auf das angeforderte Semaphore-\/\+Objekt. \\
+\hline
+{\em u32\+Timeout\+Ticks} & Maximale Wartezeit in OS-\/\+Ticks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 wenn das Token innerhalb der Zeit erhalten wurde, 0 bei Timeout. 
+\end{DoxyReturn}
+\Hypertarget{_mutex__and___semaphoren_8c_aa005cb3fa3f0f17ef73da4383bef26c5}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Sem\_Release@{OS\_Sem\_Release}}
+\index{OS\_Sem\_Release@{OS\_Sem\_Release}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Sem\_Release()}{OS\_Sem\_Release()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_aa005cb3fa3f0f17ef73da4383bef26c5} 
+void OS\+\_\+\+Sem\+\_\+\+Release (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Sem}{}\end{DoxyParamCaption})}
+
+
+
+Gibt ein Semaphore-\/\+Token frei oder signalisiert ein Event. 
+
+Wenn sich Tasks in der Warteschlange befinden, wird der Zähler (Count) nicht erhöht. Stattdessen wird direkt ein wartender Task geweckt (Task\+State\+\_\+\+Ready) und ein Context Switch angefordert. Andernfalls wird der Token-\/\+Zähler inkrementiert.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Sem} & Zeiger auf das freizugebende Semaphore-\/\+Objekt. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_mutex__and___semaphoren_8c_a2b5cf1f9bdd531ae3eb6620760fbc5bd}\index{Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}!OS\_Semaphore\_init@{OS\_Semaphore\_init}}
+\index{OS\_Semaphore\_init@{OS\_Semaphore\_init}!Mutex\_and\_Semaphoren.c@{Mutex\_and\_Semaphoren.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Semaphore\_init()}{OS\_Semaphore\_init()}}
+{\footnotesize\ttfamily \label{_mutex__and___semaphoren_8c_a2b5cf1f9bdd531ae3eb6620760fbc5bd} 
+void OS\+\_\+\+Semaphore\+\_\+init (\begin{DoxyParamCaption}\item[{OS\+\_\+\+Semaphore\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+Sem}{, }\item[{uint32\+\_\+t}]{u32\+Init\+Count}{, }\item[{uint32\+\_\+t}]{u32\+Max\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Initialisiert eine Semaphore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Sem} & Zeiger auf das zu initialisierende OS\+\_\+\+Semaphore\+\_\+t Objekt. \\
+\hline
+{\em u32\+Init\+Count} & Anfängliche Anzahl der verfügbaren Token/\+\+Ressourcen. \\
+\hline
+{\em u32\+Max\+Count} & Maximale Anzahl an Token, die diese Semaphore aufnehmen kann. \\
+\hline
+\end{DoxyParams}

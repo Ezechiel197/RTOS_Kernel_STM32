@@ -1,0 +1,9 @@
+../Core/Src/MessageQueue.c:29:6:OS_MsgQ_Init	1
+../Core/Src/MessageQueue.c:45:9:OS_MsgQ_IsEmpty	1
+../Core/Src/MessageQueue.c:55:9:OS_MsgQ_IsFull	1
+../Core/Src/MessageQueue.c:73:9:OS_MsgQ_SendNonBlocking	6
+../Core/Src/MessageQueue.c:115:6:OS_MsgQ_SendBlocking	6
+../Core/Src/MessageQueue.c:163:9:OS_MsgQ_SendTimeout	12
+../Core/Src/MessageQueue.c:248:9:OS_MsgQ_ReadNonBlocking	6
+../Core/Src/MessageQueue.c:289:6:OS_MsgQ_ReadBlocking	6
+../Core/Src/MessageQueue.c:337:9:OS_MsgQ_ReadTimeout	12

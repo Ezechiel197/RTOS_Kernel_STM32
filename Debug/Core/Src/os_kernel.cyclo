@@ -1,0 +1,6 @@
+../Drivers/CMSIS/Include/core_cm4.h:1809:22:__NVIC_SetPriority	2
+../Core/Src/os_kernel.c:44:9:OS_TaskCreate	2
+../Core/Src/os_kernel.c:93:6:OS_KernelStart	4
+../Core/Src/os_kernel.c:127:6:OS_Scheduler	5
+../Core/Src/os_kernel.c:185:29:OS_StartFirstTask	1
+../Core/Src/os_kernel.c:217:6:OS_Delay	2

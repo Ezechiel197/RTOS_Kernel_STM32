@@ -1,0 +1,205 @@
+\doxysection{os\+\_\+kernel.\+c File Reference}
+\hypertarget{os__kernel_8c}{}\label{os__kernel_8c}\index{os\_kernel.c@{os\_kernel.c}}
+
+
+Kernfunktionen des Real-\/\+Time Operating Systems (RTOS).  
+
+
+{\ttfamily \+\#include "{}stm32l4xx.\+h"{}}\newline
+{\ttfamily \+\#include "{}os\+\_\+kernel.\+h"{}}\newline
+{\ttfamily \+\#include "{}tcb.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{os__kernel_8c_a34d1254d68efd73f1e501380453980ec}{Max\+\_\+\+Task}}~3
+\begin{DoxyCompactList}\small\item\em Maximale Anzahl an Tasks, die vom OS verwaltet werden (inkl. Idle-\/\+Task). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void(\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{os__kernel_8c_a6718563d963003698f3487a1ab9293ad}{OS\+\_\+\+Task\+Function\+\_\+t}}) (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{os__kernel_8c_ac12c4e6625448f2b8f1f9ef65da7c946}{OS\+\_\+\+Start\+First\+Task}} (void)
+\item 
+uint8\+\_\+t \doxymbox{\hyperlink{os__kernel_8c_a5b798d5813b84cdcb5029b0d237f05cc}{OS\+\_\+\+Task\+Create}} (\doxymbox{\hyperlink{os__kernel_8c_a6718563d963003698f3487a1ab9293ad}{OS\+\_\+\+Task\+Function\+\_\+t}} p\+Task\+Code, uint8\+\_\+t u8\+Prio, uint8\+\_\+t u8\+Task\+Id)
+\begin{DoxyCompactList}\small\item\em Erstellt einen neuen Task und initialisiert dessen Stack. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{os__kernel_8c_a99eb7e98b78c0646c5b44ef392ba588f}{OS\+\_\+\+Kernel\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em Startet den RTOS-\/\+Kernel und übergibt die Kontrolle an den ersten Task. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{os__kernel_8c_a8476cf7898494fd1499c79769d65ed34}{OS\+\_\+\+Scheduler}} (void)
+\begin{DoxyCompactList}\small\item\em Führt die Task-\/\+Planung (Scheduling) durch. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{os__kernel_8c_a2804a023941a956288c32ad08b2cf59e}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((naked))
+\begin{DoxyCompactList}\small\item\em Startet den ersten Task (Assembler-\/\+Einsprung). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{os__kernel_8c_ab5ed9279d3faff181a277594e53ac5af}{OS\+\_\+\+Delay}} (uint32\+\_\+t tick\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Blockiert den aktuellen Task für eine definierte Anzahl an Ticks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+TCB\+\_\+sct\+TCB\+\_\+t \doxymbox{\hyperlink{os__kernel_8c_ac8d03ee56bba044ada9640bcedfe1516}{g\+\_\+asct\+TCBs}} \+[\doxymbox{\hyperlink{os__kernel_8c_a34d1254d68efd73f1e501380453980ec}{Max\+\_\+\+Task}}]\+
+\begin{DoxyCompactList}\small\item\em Array zur Speicherung der Task Control Blocks (TCBs). \end{DoxyCompactList}\item 
+TCB\+\_\+sct\+TCB\+\_\+t \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{os__kernel_8c_a5ae0a61ddee963dc266640e944fe309b}{g\+\_\+p\+Current\+TCB}}
+\begin{DoxyCompactList}\small\item\em Zeiger auf den TCB des aktuell auszuführenden Tasks. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{os__kernel_8c_a910ec24c45ea846673d13b867840f805}{MAX\+\_\+\+TASKS}}
+\begin{DoxyCompactList}\small\item\em Externe Variable, definiert die absolute maximale Task-\/\+Anzahl. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Kernfunktionen des Real-\/\+Time Operating Systems (RTOS). 
+
+Diese Datei enthält die Kernverwaltung des RTOS, einschließlich der Task-\/\+Erstellung, der Initialisierung des Schedulers, der Kontextwechsel-\/\+Logik sowie der Delay-\/\+Funktionalität. Der Scheduler implementiert ein präemptives Round-\/\+Robin (RR) Verfahren unter Berücksichtigung eines Idle-\/\+Tasks.
+
+\begin{DoxyAuthor}{Author}
+Ezechiel Tonkeme 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10. Mai 2026 
+\end{DoxyDate}
+
+
+\label{os__kernel_8c_doc-define-members}
+\Hypertarget{os__kernel_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{os__kernel_8c_a34d1254d68efd73f1e501380453980ec}\index{os\_kernel.c@{os\_kernel.c}!Max\_Task@{Max\_Task}}
+\index{Max\_Task@{Max\_Task}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{Max\_Task}{Max\_Task}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a34d1254d68efd73f1e501380453980ec} 
+\+\#define Max\+\_\+\+Task~3}
+
+
+
+Maximale Anzahl an Tasks, die vom OS verwaltet werden (inkl. Idle-\/\+Task). 
+
+
+
+\label{os__kernel_8c_doc-typedef-members}
+\Hypertarget{os__kernel_8c_doc-typedef-members}
+\doxysubsection{Typedef Documentation}
+\Hypertarget{os__kernel_8c_a6718563d963003698f3487a1ab9293ad}\index{os\_kernel.c@{os\_kernel.c}!OS\_TaskFunction\_t@{OS\_TaskFunction\_t}}
+\index{OS\_TaskFunction\_t@{OS\_TaskFunction\_t}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{OS\_TaskFunction\_t}{OS\_TaskFunction\_t}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a6718563d963003698f3487a1ab9293ad} 
+typedef void(\texorpdfstring{$\ast$}{*} OS\+\_\+\+Task\+Function\+\_\+t) (void)}
+
+
+
+\label{os__kernel_8c_doc-func-members}
+\Hypertarget{os__kernel_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{os__kernel_8c_a2804a023941a956288c32ad08b2cf59e}\index{os\_kernel.c@{os\_kernel.c}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a2804a023941a956288c32ad08b2cf59e} 
+\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(naked)}]{}{}\end{DoxyParamCaption})}
+
+
+
+Startet den ersten Task (Assembler-\/\+Einsprung). 
+
+
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+
+Das Attribut {\ttfamily \doxylink{os__kernel_8c_a2804a023941a956288c32ad08b2cf59e}{\+\_\+\+\_\+attribute\+\_\+\+\_\+((naked))}} verhindert, dass der C-\/\+Compiler eigenen Stack-\/\+Code hinzufügt, der unsere Register durcheinanderbringt. Die Funktion lädt den Stackpointer des ersten Tasks, stellt die Register wieder her und führt einen Branch ({\ttfamily bx r3}) zur Startadresse aus. \Hypertarget{os__kernel_8c_ab5ed9279d3faff181a277594e53ac5af}\index{os\_kernel.c@{os\_kernel.c}!OS\_Delay@{OS\_Delay}}
+\index{OS\_Delay@{OS\_Delay}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Delay()}{OS\_Delay()}}
+{\footnotesize\ttfamily \label{os__kernel_8c_ab5ed9279d3faff181a277594e53ac5af} 
+void OS\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tick\+\_\+time}{}\end{DoxyParamCaption})}
+
+
+
+Blockiert den aktuellen Task für eine definierte Anzahl an Ticks. 
+
+Setzt den Task in den Zustand {\ttfamily Task\+State\+\_\+\+Blocked}, weist ihm die übergebene Wartezeit zu und erzwingt sofort einen Context Switch durch Auslösen des Pend\+SV-\/\+Interrupts. Dadurch wird die CPU an den nächsten bereiten Task abgegeben. Interrupts werden kurzzeitig deaktiviert, um Dateninkonsistenzen zu vermeiden.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tick\+\_\+time} & Anzahl der OS-\/\+Ticks (Millisekunden), für die der Task pausieren soll. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{os__kernel_8c_a99eb7e98b78c0646c5b44ef392ba588f}\index{os\_kernel.c@{os\_kernel.c}!OS\_KernelStart@{OS\_KernelStart}}
+\index{OS\_KernelStart@{OS\_KernelStart}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{OS\_KernelStart()}{OS\_KernelStart()}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a99eb7e98b78c0646c5b44ef392ba588f} 
+void OS\+\_\+\+Kernel\+Start (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Startet den RTOS-\/\+Kernel und übergibt die Kontrolle an den ersten Task. 
+
+Sucht den Task mit der höchsten Priorität (niedrigster Zahlenwert), setzt die Pend\+SV-\/\+Priorität auf den niedrigsten Wert (um Interrupt-\/\+Konflikte zu vermeiden), konfiguriert den Sys\+Tick-\/\+Timer für eine Millisekunde und führt den Assembler-\/\+Sprung in den ersten Task aus. \Hypertarget{os__kernel_8c_a8476cf7898494fd1499c79769d65ed34}\index{os\_kernel.c@{os\_kernel.c}!OS\_Scheduler@{OS\_Scheduler}}
+\index{OS\_Scheduler@{OS\_Scheduler}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{OS\_Scheduler()}{OS\_Scheduler()}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a8476cf7898494fd1499c79769d65ed34} 
+void OS\+\_\+\+Scheduler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Führt die Task-\/\+Planung (Scheduling) durch. 
+
+Implementiert ein Round-\/\+Robin-\/\+Scheduling. Es wird im Array der TCBs zyklisch nach dem nächsten Task im Zustand {\ttfamily Task\+State\+\_\+\+Ready} gesucht. Der Idle-\/\+Task (letzter Task im Array) wird dabei zunächst übersprungen. Findet sich kein Ready-\/\+Task, wird der Idle-\/\+Task in den Zustand {\ttfamily Task\+State\+\_\+\+Running} versetzt. \Hypertarget{os__kernel_8c_ac12c4e6625448f2b8f1f9ef65da7c946}\index{os\_kernel.c@{os\_kernel.c}!OS\_StartFirstTask@{OS\_StartFirstTask}}
+\index{OS\_StartFirstTask@{OS\_StartFirstTask}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{OS\_StartFirstTask()}{OS\_StartFirstTask()}}
+{\footnotesize\ttfamily \label{os__kernel_8c_ac12c4e6625448f2b8f1f9ef65da7c946} 
+void OS\+\_\+\+Start\+First\+Task (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{os__kernel_8c_a5b798d5813b84cdcb5029b0d237f05cc}\index{os\_kernel.c@{os\_kernel.c}!OS\_TaskCreate@{OS\_TaskCreate}}
+\index{OS\_TaskCreate@{OS\_TaskCreate}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{OS\_TaskCreate()}{OS\_TaskCreate()}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a5b798d5813b84cdcb5029b0d237f05cc} 
+uint8\+\_\+t OS\+\_\+\+Task\+Create (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{os__kernel_8c_a6718563d963003698f3487a1ab9293ad}{OS\+\_\+\+Task\+Function\+\_\+t}}}]{p\+Task\+Code}{, }\item[{uint8\+\_\+t}]{u8\+Prio}{, }\item[{uint8\+\_\+t}]{u8\+Task\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Erstellt einen neuen Task und initialisiert dessen Stack. 
+
+Diese Funktion weist dem neuen Task einen TCB zu und bereitet den Stack-\/\+Frame so vor, als wäre der Task durch einen Interrupt unterbrochen worden. Dies umfasst den Hardware-\/\+Stack (x\+PSR, PC, LR, R12, R3-\/\+R0) sowie den Software-\/\+Stack (R11-\/\+R4) für die ARM Cortex-\/M Architektur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Task\+Code} & Funktionszeiger auf die auszuführende Task-\/\+Funktion. \\
+\hline
+{\em u8\+Prio} & Priorität des Tasks (niedriger Wert = höhere Priorität). \\
+\hline
+{\em u8\+Task\+Id} & Eindeutige ID des Tasks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 bei erfolgreicher Erstellung, 1 wenn die maximale Task-\/\+Anzahl (Max\+\_\+\+Task) erreicht ist. 
+\end{DoxyReturn}
+
+
+\label{os__kernel_8c_doc-var-members}
+\Hypertarget{os__kernel_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{os__kernel_8c_ac8d03ee56bba044ada9640bcedfe1516}\index{os\_kernel.c@{os\_kernel.c}!g\_asctTCBs@{g\_asctTCBs}}
+\index{g\_asctTCBs@{g\_asctTCBs}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{g\_asctTCBs}{g\_asctTCBs}}
+{\footnotesize\ttfamily \label{os__kernel_8c_ac8d03ee56bba044ada9640bcedfe1516} 
+TCB\+\_\+sct\+TCB\+\_\+t g\+\_\+asct\+TCBs\+[\doxymbox{\hyperlink{os__kernel_8c_a34d1254d68efd73f1e501380453980ec}{Max\+\_\+\+Task}}]\+}
+
+
+
+Array zur Speicherung der Task Control Blocks (TCBs). 
+
+\Hypertarget{os__kernel_8c_a5ae0a61ddee963dc266640e944fe309b}\index{os\_kernel.c@{os\_kernel.c}!g\_pCurrentTCB@{g\_pCurrentTCB}}
+\index{g\_pCurrentTCB@{g\_pCurrentTCB}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{g\_pCurrentTCB}{g\_pCurrentTCB}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a5ae0a61ddee963dc266640e944fe309b} 
+TCB\+\_\+sct\+TCB\+\_\+t\texorpdfstring{$\ast$}{*} g\+\_\+p\+Current\+TCB}
+
+
+
+Zeiger auf den TCB des aktuell auszuführenden Tasks. 
+
+\Hypertarget{os__kernel_8c_a910ec24c45ea846673d13b867840f805}\index{os\_kernel.c@{os\_kernel.c}!MAX\_TASKS@{MAX\_TASKS}}
+\index{MAX\_TASKS@{MAX\_TASKS}!os\_kernel.c@{os\_kernel.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_TASKS}{MAX\_TASKS}}
+{\footnotesize\ttfamily \label{os__kernel_8c_a910ec24c45ea846673d13b867840f805} 
+uint32\+\_\+t MAX\+\_\+\+TASKS\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Externe Variable, definiert die absolute maximale Task-\/\+Anzahl. 
+

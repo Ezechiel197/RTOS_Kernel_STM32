@@ -1,0 +1,183 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Topic Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Topics}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Topic Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}CMSIS }{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Stm32l4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}system }{5}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Detailed Description}{5}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}STM32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Private\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Includes }{5}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}STM32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Private\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Types\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Definitions }{5}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}STM32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Private\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Defines }{5}{subsubsection.3.1.2.4}%
+\contentsline {subsubsubsection}{\numberline {3.1.2.4.1}Detailed Description}{6}{subsubsubsection.3.1.2.4.1}%
+\contentsline {subsubsubsection}{\numberline {3.1.2.4.2}Macro Definition Documentation}{6}{subsubsubsection.3.1.2.4.2}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.4.2.1}HSE\_VALUE}{6}{subsubsubsubsection.3.1.2.4.2.1}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.4.2.2}HSI\_VALUE}{6}{subsubsubsubsection.3.1.2.4.2.2}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.4.2.3}MSI\_VALUE}{6}{subsubsubsubsection.3.1.2.4.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.5}STM32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Private\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Macros }{6}{subsubsection.3.1.2.5}%
+\contentsline {subsubsection}{\numberline {3.1.2.6}STM32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Private\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Variables }{6}{subsubsection.3.1.2.6}%
+\contentsline {subsubsubsection}{\numberline {3.1.2.6.1}Detailed Description}{6}{subsubsubsection.3.1.2.6.1}%
+\contentsline {subsubsubsection}{\numberline {3.1.2.6.2}Variable Documentation}{6}{subsubsubsection.3.1.2.6.2}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.6.2.1}AHBPrescTable}{6}{subsubsubsubsection.3.1.2.6.2.1}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.6.2.2}APBPrescTable}{6}{subsubsubsubsection.3.1.2.6.2.2}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.6.2.3}MSIRangeTable}{7}{subsubsubsubsection.3.1.2.6.2.3}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.6.2.4}SystemCoreClock}{7}{subsubsubsubsection.3.1.2.6.2.4}%
+\contentsline {subsubsection}{\numberline {3.1.2.7}STM32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Private\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Function\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Prototypes }{7}{subsubsection.3.1.2.7}%
+\contentsline {subsubsection}{\numberline {3.1.2.8}STM32\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Private\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Functions }{7}{subsubsection.3.1.2.8}%
+\contentsline {subsubsubsection}{\numberline {3.1.2.8.1}Detailed Description}{7}{subsubsubsection.3.1.2.8.1}%
+\contentsline {subsubsubsection}{\numberline {3.1.2.8.2}Function Documentation}{7}{subsubsubsection.3.1.2.8.2}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.8.2.1}SystemCoreClockUpdate()}{7}{subsubsubsubsection.3.1.2.8.2.1}%
+\contentsline {subsubsubsubsection}{\numberline {3.1.2.8.2.2}SystemInit()}{8}{subsubsubsubsection.3.1.2.8.2.2}%
+\contentsline {chapter}{\numberline {4}File Documentation}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Function Documentation}{10}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Error\_Handler()}{10}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}main()}{10}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}SystemClock\_Config()}{11}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}Task\_BlinkGreen()}{11}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}Task\_BlinkRed()}{11}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}Task\_Idle()}{11}{subsubsection.4.1.2.6}%
+\contentsline {subsection}{\numberline {4.1.3}Variable Documentation}{11}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}hdfsdm1\_channel1}{11}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}hi2c2}{11}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}hpcd\_USB\_OTG\_FS}{11}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}hqspi}{12}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}hspi3}{12}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}huart1}{12}{subsubsection.4.1.3.6}%
+\contentsline {subsubsection}{\numberline {4.1.3.7}huart3}{12}{subsubsection.4.1.3.7}%
+\contentsline {subsubsection}{\numberline {4.1.3.8}MAX\_TASKS}{12}{subsubsection.4.1.3.8}%
+\contentsline {section}{\numberline {4.2}Message\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Queue.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{12}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{13}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Macro Definition Documentation}{13}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Max\_Task}{13}{subsubsection.4.2.2.1}%
+\contentsline {subsection}{\numberline {4.2.3}Function Documentation}{14}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}OS\_MsgQ\_Init()}{14}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}OS\_MsgQ\_IsEmpty()}{14}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}OS\_MsgQ\_IsFull()}{14}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}OS\_MsgQ\_ReadBlocking()}{15}{subsubsection.4.2.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.3.5}OS\_MsgQ\_ReadNonBlocking()}{15}{subsubsection.4.2.3.5}%
+\contentsline {subsubsection}{\numberline {4.2.3.6}OS\_MsgQ\_ReadTimeout()}{15}{subsubsection.4.2.3.6}%
+\contentsline {subsubsection}{\numberline {4.2.3.7}OS\_MsgQ\_SendBlocking()}{16}{subsubsection.4.2.3.7}%
+\contentsline {subsubsection}{\numberline {4.2.3.8}OS\_MsgQ\_SendNonBlocking()}{16}{subsubsection.4.2.3.8}%
+\contentsline {subsubsection}{\numberline {4.2.3.9}OS\_MsgQ\_SendTimeout()}{17}{subsubsection.4.2.3.9}%
+\contentsline {section}{\numberline {4.3}Mutex\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Semaphoren.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{17}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{18}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Macro Definition Documentation}{18}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Max\_Task}{18}{subsubsection.4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}Function Documentation}{18}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}OS\_Mutex\_AcquireBlocking()}{18}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}OS\_Mutex\_AcquireNonBlocking()}{19}{subsubsection.4.3.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3.3}OS\_Mutex\_AcquireTimeout()}{19}{subsubsection.4.3.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.4}OS\_Mutex\_Init()}{19}{subsubsection.4.3.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.3.5}OS\_Mutex\_Release()}{20}{subsubsection.4.3.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.3.6}OS\_Sem\_AcquireBlocking()}{20}{subsubsection.4.3.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.3.7}OS\_Sem\_AcquireNonBlocking()}{20}{subsubsection.4.3.3.7}%
+\contentsline {subsubsection}{\numberline {4.3.3.8}OS\_Sem\_AcquireTimeout()}{21}{subsubsection.4.3.3.8}%
+\contentsline {subsubsection}{\numberline {4.3.3.9}OS\_Sem\_Release()}{21}{subsubsection.4.3.3.9}%
+\contentsline {subsubsection}{\numberline {4.3.3.10}OS\_Semaphore\_init()}{21}{subsubsection.4.3.3.10}%
+\contentsline {section}{\numberline {4.4}os\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}kernel.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{22}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{23}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Macro Definition Documentation}{23}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Max\_Task}{23}{subsubsection.4.4.2.1}%
+\contentsline {subsection}{\numberline {4.4.3}Typedef Documentation}{23}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}OS\_TaskFunction\_t}{23}{subsubsection.4.4.3.1}%
+\contentsline {subsection}{\numberline {4.4.4}Function Documentation}{23}{subsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.4.1}\_\_attribute\_\_()}{23}{subsubsection.4.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.4.2}OS\_Delay()}{24}{subsubsection.4.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.4.3}OS\_KernelStart()}{24}{subsubsection.4.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4.4}OS\_Scheduler()}{24}{subsubsection.4.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.4.5}OS\_StartFirstTask()}{24}{subsubsection.4.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.4.6}OS\_TaskCreate()}{25}{subsubsection.4.4.4.6}%
+\contentsline {subsection}{\numberline {4.4.5}Variable Documentation}{25}{subsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.5.1}g\_asctTCBs}{25}{subsubsection.4.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.4.5.2}g\_pCurrentTCB}{25}{subsubsection.4.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.4.5.3}MAX\_TASKS}{25}{subsubsection.4.4.5.3}%
+\contentsline {section}{\numberline {4.5}stm32l4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}msp.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{25}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{26}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Function Documentation}{27}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}HAL\_DFSDM\_ChannelMspDeInit()}{27}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}HAL\_DFSDM\_ChannelMspInit()}{27}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}HAL\_I2C\_MspDeInit()}{27}{subsubsection.4.5.2.3}%
+\contentsline {subsubsection}{\numberline {4.5.2.4}HAL\_I2C\_MspInit()}{28}{subsubsection.4.5.2.4}%
+\contentsline {subsubsection}{\numberline {4.5.2.5}HAL\_MspInit()}{28}{subsubsection.4.5.2.5}%
+\contentsline {subsubsection}{\numberline {4.5.2.6}HAL\_PCD\_MspDeInit()}{28}{subsubsection.4.5.2.6}%
+\contentsline {subsubsection}{\numberline {4.5.2.7}HAL\_PCD\_MspInit()}{29}{subsubsection.4.5.2.7}%
+\contentsline {subsubsection}{\numberline {4.5.2.8}HAL\_QSPI\_MspDeInit()}{29}{subsubsection.4.5.2.8}%
+\contentsline {subsubsection}{\numberline {4.5.2.9}HAL\_QSPI\_MspInit()}{30}{subsubsection.4.5.2.9}%
+\contentsline {subsubsection}{\numberline {4.5.2.10}HAL\_SPI\_MspDeInit()}{30}{subsubsection.4.5.2.10}%
+\contentsline {subsubsection}{\numberline {4.5.2.11}HAL\_SPI\_MspInit()}{30}{subsubsection.4.5.2.11}%
+\contentsline {subsubsection}{\numberline {4.5.2.12}HAL\_UART\_MspDeInit()}{31}{subsubsection.4.5.2.12}%
+\contentsline {subsubsection}{\numberline {4.5.2.13}HAL\_UART\_MspInit()}{31}{subsubsection.4.5.2.13}%
+\contentsline {section}{\numberline {4.6}stm32l4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}it.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{32}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{33}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Macro Definition Documentation}{33}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}Max\_Task}{33}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}TIME\_SLICE\_TICKS}{33}{subsubsection.4.6.2.2}%
+\contentsline {subsection}{\numberline {4.6.3}Function Documentation}{33}{subsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.1}\_\_attribute\_\_()}{33}{subsubsection.4.6.3.1}%
+\contentsline {subsubsection}{\numberline {4.6.3.2}BusFault\_Handler()}{33}{subsubsection.4.6.3.2}%
+\contentsline {subsubsection}{\numberline {4.6.3.3}DebugMon\_Handler()}{34}{subsubsection.4.6.3.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.4}EXTI15\_10\_IRQHandler()}{34}{subsubsection.4.6.3.4}%
+\contentsline {subsubsection}{\numberline {4.6.3.5}EXTI9\_5\_IRQHandler()}{34}{subsubsection.4.6.3.5}%
+\contentsline {subsubsection}{\numberline {4.6.3.6}HardFault\_Handler()}{34}{subsubsection.4.6.3.6}%
+\contentsline {subsubsection}{\numberline {4.6.3.7}MemManage\_Handler()}{34}{subsubsection.4.6.3.7}%
+\contentsline {subsubsection}{\numberline {4.6.3.8}NMI\_Handler()}{34}{subsubsection.4.6.3.8}%
+\contentsline {subsubsection}{\numberline {4.6.3.9}OS\_Scheduler()}{34}{subsubsection.4.6.3.9}%
+\contentsline {subsubsection}{\numberline {4.6.3.10}SVC\_Handler()}{35}{subsubsection.4.6.3.10}%
+\contentsline {subsubsection}{\numberline {4.6.3.11}SysTick\_Handler()}{35}{subsubsection.4.6.3.11}%
+\contentsline {subsubsection}{\numberline {4.6.3.12}UsageFault\_Handler()}{35}{subsubsection.4.6.3.12}%
+\contentsline {subsection}{\numberline {4.6.4}Variable Documentation}{35}{subsection.4.6.4}%
+\contentsline {subsubsection}{\numberline {4.6.4.1}g\_asctTCBs}{35}{subsubsection.4.6.4.1}%
+\contentsline {subsubsection}{\numberline {4.6.4.2}g\_pCurrentTCB}{35}{subsubsection.4.6.4.2}%
+\contentsline {section}{\numberline {4.7}syscalls.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{36}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{36}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}Function Documentation}{37}{subsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.1}\_\_attribute\_\_()}{37}{subsubsection.4.7.2.1}%
+\contentsline {subsubsection}{\numberline {4.7.2.2}\_\_io\_getchar()}{37}{subsubsection.4.7.2.2}%
+\contentsline {subsubsection}{\numberline {4.7.2.3}\_\_io\_putchar()}{37}{subsubsection.4.7.2.3}%
+\contentsline {subsubsection}{\numberline {4.7.2.4}\_close()}{37}{subsubsection.4.7.2.4}%
+\contentsline {subsubsection}{\numberline {4.7.2.5}\_execve()}{37}{subsubsection.4.7.2.5}%
+\contentsline {subsubsection}{\numberline {4.7.2.6}\_exit()}{37}{subsubsection.4.7.2.6}%
+\contentsline {subsubsection}{\numberline {4.7.2.7}\_fork()}{37}{subsubsection.4.7.2.7}%
+\contentsline {subsubsection}{\numberline {4.7.2.8}\_fstat()}{37}{subsubsection.4.7.2.8}%
+\contentsline {subsubsection}{\numberline {4.7.2.9}\_getpid()}{38}{subsubsection.4.7.2.9}%
+\contentsline {subsubsection}{\numberline {4.7.2.10}\_isatty()}{38}{subsubsection.4.7.2.10}%
+\contentsline {subsubsection}{\numberline {4.7.2.11}\_kill()}{38}{subsubsection.4.7.2.11}%
+\contentsline {subsubsection}{\numberline {4.7.2.12}\_link()}{38}{subsubsection.4.7.2.12}%
+\contentsline {subsubsection}{\numberline {4.7.2.13}\_lseek()}{38}{subsubsection.4.7.2.13}%
+\contentsline {subsubsection}{\numberline {4.7.2.14}\_open()}{38}{subsubsection.4.7.2.14}%
+\contentsline {subsubsection}{\numberline {4.7.2.15}\_stat()}{38}{subsubsection.4.7.2.15}%
+\contentsline {subsubsection}{\numberline {4.7.2.16}\_times()}{38}{subsubsection.4.7.2.16}%
+\contentsline {subsubsection}{\numberline {4.7.2.17}\_unlink()}{39}{subsubsection.4.7.2.17}%
+\contentsline {subsubsection}{\numberline {4.7.2.18}\_wait()}{39}{subsubsection.4.7.2.18}%
+\contentsline {subsubsection}{\numberline {4.7.2.19}initialise\_monitor\_handles()}{39}{subsubsection.4.7.2.19}%
+\contentsline {subsection}{\numberline {4.7.3}Variable Documentation}{39}{subsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}environ}{39}{subsubsection.4.7.3.1}%
+\contentsline {section}{\numberline {4.8}sysmem.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{39}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Detailed Description}{39}{subsection.4.8.1}%
+\contentsline {subsection}{\numberline {4.8.2}Function Documentation}{40}{subsection.4.8.2}%
+\contentsline {subsubsection}{\numberline {4.8.2.1}\_sbrk()}{40}{subsubsection.4.8.2.1}%
+\contentsline {section}{\numberline {4.9}system\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}stm32l4xx.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{40}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Detailed Description}{41}{subsection.4.9.1}%
+\contentsline {subsection}{\numberline {4.9.2}This file configures the system clock as follows:\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}}{41}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}System Clock source $\vert $ MSI}{41}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}SYSCLK(\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hz) $\vert $ 4000000}{41}{subsubsection.4.9.2.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}HCLK(\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hz) $\vert $ 4000000}{41}{subsubsection.4.9.2.3}%
+\contentsline {subsubsection}{\numberline {4.9.2.4}AHB Prescaler $\vert $ 1}{41}{subsubsection.4.9.2.4}%
+\contentsline {subsubsection}{\numberline {4.9.2.5}APB1 Prescaler $\vert $ 1}{41}{subsubsection.4.9.2.5}%
+\contentsline {subsubsection}{\numberline {4.9.2.6}APB2 Prescaler $\vert $ 1}{41}{subsubsection.4.9.2.6}%
+\contentsline {subsubsection}{\numberline {4.9.2.7}PLL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M $\vert $ 1}{41}{subsubsection.4.9.2.7}%
+\contentsline {subsubsection}{\numberline {4.9.2.8}PLL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}N $\vert $ 8}{41}{subsubsection.4.9.2.8}%
+\contentsline {subsubsection}{\numberline {4.9.2.9}PLL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P $\vert $ 7}{41}{subsubsection.4.9.2.9}%
+\contentsline {subsubsection}{\numberline {4.9.2.10}PLL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Q $\vert $ 2}{41}{subsubsection.4.9.2.10}%
+\contentsline {subsubsection}{\numberline {4.9.2.11}PLL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R $\vert $ 2}{41}{subsubsection.4.9.2.11}%
+\contentsline {subsubsection}{\numberline {4.9.2.12}PLLSAI1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P $\vert $ NA}{41}{subsubsection.4.9.2.12}%
+\contentsline {subsubsection}{\numberline {4.9.2.13}PLLSAI1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Q $\vert $ NA}{41}{subsubsection.4.9.2.13}%
+\contentsline {subsubsection}{\numberline {4.9.2.14}PLLSAI1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R $\vert $ NA}{41}{subsubsection.4.9.2.14}%
+\contentsline {subsubsection}{\numberline {4.9.2.15}PLLSAI2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P $\vert $ NA}{41}{subsubsection.4.9.2.15}%
+\contentsline {subsubsection}{\numberline {4.9.2.16}PLLSAI2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Q $\vert $ NA}{41}{subsubsection.4.9.2.16}%
+\contentsline {subsubsection}{\numberline {4.9.2.17}PLLSAI2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R $\vert $ NA}{41}{subsubsection.4.9.2.17}%
+\contentsline {subsubsection}{\numberline {4.9.2.18}SDIO and RNG clock $\vert $}{42}{subsubsection.4.9.2.18}%

@@ -1,0 +1,25 @@
+var group___r_c_c___a_p_b1___clock___sleep___enable___disable___status =
+[
+    [ "__HAL_RCC_I2C1_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga133208873edc0be1774bf4f3c224a2ac", null ],
+    [ "__HAL_RCC_I2C1_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga39a3efabea0fb3cffae7be7726dd668e", null ],
+    [ "__HAL_RCC_I2C3_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga06401c2fc03285cb8a484569d0ec2f3a", null ],
+    [ "__HAL_RCC_I2C3_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gaae09cbe8d45bdf89178a4adfed223f4b", null ],
+    [ "__HAL_RCC_LPTIM1_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga4b5d0c823a0efc995389abaa7e8bef4a", null ],
+    [ "__HAL_RCC_LPTIM1_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gaffbc4ed076ab667f6d48b734a8d2220e", null ],
+    [ "__HAL_RCC_LPTIM2_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga65f3f62a0fb9aa17dd0ff5e4effa5844", null ],
+    [ "__HAL_RCC_LPTIM2_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga448c06537741a356609e5f9dfa27509e", null ],
+    [ "__HAL_RCC_LPUART1_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga7710f33531a498c0def848039e06827a", null ],
+    [ "__HAL_RCC_LPUART1_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gabfabd5ae7c0d36c5971387ed58059f67", null ],
+    [ "__HAL_RCC_OPAMP_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gaf1816902da3b642b59136e69e6e48cc4", null ],
+    [ "__HAL_RCC_OPAMP_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gaaa2baaafae70189f5ee828764fd3e0aa", null ],
+    [ "__HAL_RCC_PWR_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga13a44a1aacea32084e5bcdba69e4a636", null ],
+    [ "__HAL_RCC_PWR_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga898edde3fc183744da208db023828303", null ],
+    [ "__HAL_RCC_TIM2_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga0a89c97a19d5057d710e475ff24b71ec", null ],
+    [ "__HAL_RCC_TIM2_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gaf38181befdeecf6a61c03885d3645bf1", null ],
+    [ "__HAL_RCC_TIM6_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gaafa07cf3cfeac5be4071e52201dfcc7d", null ],
+    [ "__HAL_RCC_TIM6_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga8d5d8a349946a4c0698d754ee107c3cf", null ],
+    [ "__HAL_RCC_USART2_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#gad83f4e02928278fc0d9373020a82f4e0", null ],
+    [ "__HAL_RCC_USART2_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga91dc6d0fdf5c1c70158336df3bf5e097", null ],
+    [ "__HAL_RCC_WWDG_IS_CLK_SLEEP_DISABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga3cbf3b3683a84bac98b6d15d921f5ec8", null ],
+    [ "__HAL_RCC_WWDG_IS_CLK_SLEEP_ENABLED", "group___r_c_c___a_p_b1___clock___sleep___enable___disable___status.html#ga60b229aff9ca29a44a5470f52a48bb2f", null ]
+];
