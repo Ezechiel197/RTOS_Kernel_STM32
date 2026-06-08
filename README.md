@@ -38,7 +38,7 @@ Highest Memory Address (Stack Top)
 Lowest Memory Address
 ```
 
-```
+
 ## **File Structure**
 - **`os_kernel.c` / `os_kernel.h`:** Contains the system core logic, task creation APIs, scheduling loops, time delays, and the naked assembly bootstrapper `OS_StartFirstTask`.
   
