@@ -36,7 +36,7 @@ Highest Memory Address (Stack Top)
 |   R11 - R4        |  <- Software Frame (Saved manually in PendSV)
 +-------------------+  <- Current u32TaskSP
 Lowest Memory Address
-```
+
 
 
 ## **File Structure**
