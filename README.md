@@ -115,5 +115,6 @@ Implemented as a circular buffer (`OS_MessageQueue_t`) with `u32Head`, `u32Tail`
 
 ## Pictures
 
-<img width="984" height="556" alt="image" src="https://github.com/user-attachments/assets/2a951754-50e4-44c9-88cf-570fbb05ffc0" />
+<img width="964" height="556" alt="image" src="https://github.com/user-attachments/assets/ccf102fb-76d3-498d-9105-00c219b31668" />
+
 
