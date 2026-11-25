@@ -1,0 +1,76 @@
+# ==============================================================================
+# TeSSLa-Spezifikation zur Echtzeit-Verifizierung von OS-Primitiven
+# Autor: Ezechiel Tonkeme
+# ==============================================================================
+
+in events: Events[String]
+
+# ------------------------------------------------------------------------------
+# 1. Event-Filter
+# ------------------------------------------------------------------------------
+def ev_mutex_take    := filter(events, events == "SYSVIEW_EV_MUTEX_TAKE")
+def ev_mutex_give    := filter(events, events == "SYSVIEW_EV_MUTEX_GIVE")
+
+def ev_sem_wait      := filter(events, events == "SYSVIEW_EV_SEMAPHORE_WAIT")
+def ev_sem_post      := filter(events, events == "SYSVIEW_EV_SEMAPHORE_POST")
+
+def ev_queue_send    := filter(events, events == "SYSVIEW_EV_QUEUE_SEND")
+def ev_queue_receive := filter(events, events == "SYSVIEW_EV_QUEUE_RECEIVE")
+
+def ev_i2c_wait      := filter(events, events == "SYSVIEW_MARKER_I2C_WAIT")
+def ev_uart_tx       := filter(events, events == "SYSVIEW_MARKER_UART_TX")
+
+# ------------------------------------------------------------------------------
+# 2. Queue-Überwachung (Kapazität: 5)
+# ------------------------------------------------------------------------------
+def queue_inc := const(1, ev_queue_send)
+def queue_dec := const(-1, ev_queue_receive)
+def queue_change := merge(queue_inc, queue_dec)
+
+def queue_prev := default(last(queue_count, queue_change), 0)
+def queue_count: Events[Int] := queue_prev + queue_change
+
+def queue_overflow  := slift2(queue_count, const(5, events), (x: Int, max: Int) => x > max)
+def queue_underflow := slift2(queue_count, const(0, events), (x: Int, min: Int) => x < min)
+
+# ------------------------------------------------------------------------------
+# 3. Mutex-Überwachung (Symmetrie & Exklusivität)
+# ------------------------------------------------------------------------------
+def mutex_inc := const(1, ev_mutex_take)
+def mutex_dec := const(-1, ev_mutex_give)
+def mutex_change := merge(mutex_inc, mutex_dec)
+
+def mutex_prev := default(last(mutex_state, mutex_change), 0)
+def mutex_state: Events[Int] := mutex_prev + mutex_change
+
+def mutex_error_double_take  := slift2(mutex_state, const(1, events), (x: Int, max: Int) => x > max)
+def mutex_error_invalid_give := slift2(mutex_state, const(0, events), (x: Int, min: Int) => x < min)
+
+# ------------------------------------------------------------------------------
+# 4. Semaphoren-Überwachung
+# ------------------------------------------------------------------------------
+def sem_inc := const(1, ev_sem_post)
+def sem_dec := const(-1, ev_sem_wait)
+def sem_change := merge(sem_inc, sem_dec)
+
+def sem_prev := default(last(sem_count, sem_change), 0)
+def sem_count: Events[Int] := sem_prev + sem_change
+
+def sem_underflow := slift2(sem_count, const(0, events), (x: Int, min: Int) => x < min)
+
+# ------------------------------------------------------------------------------
+# 5. TeSSLa Ausgaben
+# ------------------------------------------------------------------------------
+out queue_count
+out queue_overflow
+out queue_underflow
+
+out mutex_state
+out mutex_error_double_take
+out mutex_error_invalid_give
+
+out sem_count
+out sem_underflow
+
+out ev_i2c_wait
+out ev_uart_tx

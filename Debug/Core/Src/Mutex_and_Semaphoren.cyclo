@@ -1,0 +1,11 @@
+../Core/Src/Mutex_and_Semaphoren.c:39:6:OS_Mutex_Init	1
+../Core/Src/Mutex_and_Semaphoren.c:55:9:OS_Mutex_AcquireNonBlocking	2
+../Core/Src/Mutex_and_Semaphoren.c:81:6:OS_Mutex_AcquireBlocking	2
+../Core/Src/Mutex_and_Semaphoren.c:118:9:OS_Mutex_AcquireTimeout	4
+../Core/Src/Mutex_and_Semaphoren.c:168:6:OS_Mutex_Release	6
+../Core/Src/Mutex_and_Semaphoren.c:215:6:OS_Semaphore_Init	1
+../Core/Src/Mutex_and_Semaphoren.c:228:9:OS_Sem_AcquireNonBlocking	2
+../Core/Src/Mutex_and_Semaphoren.c:252:6:OS_Sem_AcquireBlocking	3
+../Core/Src/Mutex_and_Semaphoren.c:295:9:OS_Sem_AcquireTimeout	4
+../Core/Src/Mutex_and_Semaphoren.c:348:6:OS_Sem_Release	6
+../Core/Src/Mutex_and_Semaphoren.c:382:6:OS_Sem_ReleaseFromISR	5
